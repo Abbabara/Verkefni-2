@@ -4,7 +4,7 @@ Employee_Salary::Employee_Salary(){
 
 }
 
-Employee_Salary::Employee_Salary(string name, string ssn, int month, int year, double wage){
+Employee_Salary::Employee_Salary(string name, unsigned int ssn, int month, int year, double wage){
     this->name = name;
     this->ssn = ssn;
     this->month = month;
@@ -16,7 +16,7 @@ string Employee_Salary::get_name(){
     return this->name;
 }
 
-string Employee_Salary::get_ssn(){
+unsigned int Employee_Salary::get_ssn(){
     return this->ssn;
 }
 

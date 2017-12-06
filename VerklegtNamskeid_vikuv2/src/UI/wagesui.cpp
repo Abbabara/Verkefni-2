@@ -31,7 +31,11 @@ void WagesUI::check_input(char input){
         wages_service.get_all_for_ssn();
     }
     else if (input == '3'){
-        cout << "Get the salary for an employee on a given year" << endl;
+        unsigned int input;
+        cout << "Enter the SSN of the employee: ";
+        cin >> input;
+        cout << endl;
+        wages_service.get_salary_by_ssn(input);
     }
     else if (input == '4'){
         cout << "Who made the most in a given year" << endl;
@@ -45,8 +49,9 @@ void WagesUI::check_input(char input){
 }
 
 Employee_Salary WagesUI::add_record(){
-    string name, ssn;
+    string name;
     int month, year;
+    unsigned int ssn;
     double wage;
 
     cout << "Enter the name of the employee: ";

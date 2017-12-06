@@ -10,9 +10,9 @@ class Employee_Salary
 {
     public:
         Employee_Salary();
-        Employee_Salary(string name, string ssn, int month, int year, double wage);
+        Employee_Salary(string name, unsigned int ssn, int month, int year, double wage);
         string get_name();
-        string get_ssn();
+        unsigned int get_ssn();
         int get_month();
         int get_year();
         double get_wage();
@@ -22,7 +22,7 @@ class Employee_Salary
         friend istream& operator >> (istream& in, Employee_Salary& employee);
     private:
         string name;
-        string ssn;
+        unsigned int ssn;
         int month;
         int year;
         double wage;
