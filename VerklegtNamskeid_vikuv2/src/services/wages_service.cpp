@@ -17,6 +17,5 @@ void Wages_service::validate_record(Employee_Salary& employee){
 }
 
 void Wages_service::get_all_for_ssn(){
-    cout << "1" << endl;
     repo.read_file();
 }

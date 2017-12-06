@@ -41,31 +41,31 @@ ostream& operator << (ostream& out, Employee_Salary& employee){
         out << "Name: " << employee.name << endl;
     }
     else{
-        out << employee.name << ", ";
+        out << employee.name << " ";
     }
     if (employee.helper){
         out << "Ssn:  " << employee.ssn << endl;
     }
     else{
-        out << employee.ssn << ", ";
+        out << employee.ssn << " ";
     }
     if (employee.helper){
         out << "Month:" << employee.month << endl;
     }
     else{
-        out << employee.month << ", ";
+        out << employee.month << " ";
     }
     if (employee.helper){
         out << "Year: " << employee.year << endl;
     }
     else{
-        out << employee.year << ", ";
+        out << employee.year << " ";
     }
     if (employee.helper){
         out << "Wages:" << employee.wage << endl;
     }
     else{
-        out << employee.wage << ", ";
+        out << employee.wage << " ";
     }
     out << endl;
 
