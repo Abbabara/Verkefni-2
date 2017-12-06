@@ -9,20 +9,24 @@ using namespace std;
 class Employee_Salary
 {
     public:
-        Employee_Salary(string name, int ssn, int month, int year, double wage);
+        Employee_Salary();
+        Employee_Salary(string name, string ssn, int month, int year, double wage);
         string get_name();
-        int get_ssn();
+        string get_ssn();
         int get_month();
         int get_year();
         double get_wage();
+        void set_helper(bool check);
 
         friend ostream& operator << (ostream& out, Employee_Salary& employee);
+        friend istream& operator >> (istream& in, Employee_Salary& employee);
     private:
         string name;
-        int ssn;
+        string ssn;
         int month;
         int year;
         double wage;
+        bool helper;
 };
 
 #endif // EMPLOYEE_SALARY_H

@@ -18,6 +18,7 @@ class WagesUI
 
     private:
         Wages_service wages_service;
+        int stop;
 };
 
 #endif // WAGESUI_H

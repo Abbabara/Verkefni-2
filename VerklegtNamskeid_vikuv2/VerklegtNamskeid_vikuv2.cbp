@@ -16,6 +16,7 @@
 					<Add directory="include/models" />
 					<Add directory="include/UI" />
 					<Add directory="include/services" />
+					<Add directory="include/repositories" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -28,6 +29,7 @@
 					<Add directory="include/models" />
 					<Add directory="include/UI" />
 					<Add directory="include/services" />
+					<Add directory="include/repositories" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -40,10 +42,12 @@
 		</Compiler>
 		<Unit filename="include/UI/wagesui.h" />
 		<Unit filename="include/models/employee_salary.h" />
+		<Unit filename="include/repositories/wages_repo.h" />
 		<Unit filename="include/services/wages_service.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/UI/wagesui.cpp" />
 		<Unit filename="src/models/employee_salary.cpp" />
+		<Unit filename="src/repositories/wages_repo.cpp" />
 		<Unit filename="src/services/wages_service.cpp" />
 		<Extensions>
 			<code_completion />

@@ -1,6 +1,10 @@
 #include "employee_salary.h"
 
-Employee_Salary::Employee_Salary(string name, int ssn, int month, int year, double wage){
+Employee_Salary::Employee_Salary(){
+
+}
+
+Employee_Salary::Employee_Salary(string name, string ssn, int month, int year, double wage){
     this->name = name;
     this->ssn = ssn;
     this->month = month;
@@ -12,7 +16,7 @@ string Employee_Salary::get_name(){
     return this->name;
 }
 
-int Employee_Salary::get_ssn(){
+string Employee_Salary::get_ssn(){
     return this->ssn;
 }
 
@@ -28,13 +32,47 @@ double Employee_Salary::get_wage(){
     return this->wage;
 }
 
+void Employee_Salary::set_helper(bool check){
+    helper = check;
+}
+
 ostream& operator << (ostream& out, Employee_Salary& employee){
-    out << "Name: " << employee.name << endl
-        << "Ssn:  " << employee.ssn << endl
-        << "Month:" << employee.month << endl
-        << "Year: " << employee.year << endl
-        << "Wages:" << employee.wage << endl;
-
-
+    if (employee.helper){
+        out << "Name: " << employee.name << endl;
+    }
+    else{
+        out << employee.name << ", ";
+    }
+    if (employee.helper){
+        out << "Ssn:  " << employee.ssn << endl;
+    }
+    else{
+        out << employee.ssn << ", ";
+    }
+    if (employee.helper){
+        out << "Month:" << employee.month << endl;
+    }
+    else{
+        out << employee.month << ", ";
+    }
+    if (employee.helper){
+        out << "Year: " << employee.year << endl;
+    }
+    else{
+        out << employee.year << ", ";
+    }
+    if (employee.helper){
+        out << "Wages:" << employee.wage << endl;
+    }
+    else{
+        out << employee.wage << ", ";
+    }
     return out;
 }
+
+istream& operator >> (istream& in, Employee_Salary& employee){
+    in >> employee.name >> employee.ssn >> employee.month >> employee.year >> employee.wage;
+
+    return in;
+}
+
