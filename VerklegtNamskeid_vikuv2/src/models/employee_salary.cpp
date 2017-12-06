@@ -67,6 +67,8 @@ ostream& operator << (ostream& out, Employee_Salary& employee){
     else{
         out << employee.wage << ", ";
     }
+    out << endl;
+
     return out;
 }
 
