@@ -26,9 +26,9 @@ void Wages_repo::read_file(){
         }
         fin.close();
     }
-    for (unsigned int i = 0; i < employee_storage.size(); i++){
+    /*for (unsigned int i = 0; i < employee_storage.size(); i++){
         cout << employee_storage[i] << endl;
-    }
+    }*/
     fout.open("employee_records.txt", ios::trunc);
     fout.close();
 }

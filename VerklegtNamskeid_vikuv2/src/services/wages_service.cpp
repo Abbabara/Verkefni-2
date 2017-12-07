@@ -25,8 +25,11 @@ void Wages_service::get_salary_by_ssn(unsigned int input){
     cout << "1.0" << endl;
     for (unsigned int i = 0; i < repo.employee_storage.size(); i++){
         cout << "1.1" << endl;
+
         unsigned int temp;
         temp = repo.employee_storage[i].get_ssn();
+        cout << temp << endl;
+
         if (temp == input){
             temp_storage[i] = repo.employee_storage[i];
             cout << "1" << endl;
