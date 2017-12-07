@@ -41,7 +41,10 @@ void Employee_Salary::set_wage(double wage){
 }
 
 Employee_Salary& Employee_Salary::operator = (Employee_Salary& right_side){
-    return right_side;
+    Employee_Salary temp;
+    temp.name = right_side.name;
+
+    return temp;
 }
 
 ostream& operator << (ostream& out, Employee_Salary& employee){
