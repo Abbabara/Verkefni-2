@@ -12,9 +12,17 @@ void Wages_service::add_salary(Employee_Salary employee){
 
 }
 
-void Wages_service::validate_record(Employee_Salary& employee){
-
+bool Wages_service::isvalidName(Employee_Salary& employee){
+    string name = employee.get_name();
+    for (int i = 0; i < name.length() ; i++) {
+        if (!isalpha(name[i])) {
+            throw (invalidNameException("invalidate name!"));
+        }
+    }
+    return true;
 }
+
+
 
 void Wages_service::get_salary_by_ssn_and_year(unsigned int ssn, int year){
     repo.read_file();

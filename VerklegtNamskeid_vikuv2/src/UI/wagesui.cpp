@@ -25,7 +25,13 @@ void WagesUI::menu(){
 void WagesUI::check_input(char input){
     if (input == '1'){
 
+        try {
         wages_service.add_salary(add_record());
+        }
+        catch(invalidNameException e) {
+            cout << e.getMessage() << endl;
+        }
+
     }
     else if (input == '2'){
         unsigned int input;
