@@ -39,7 +39,7 @@ void Wages_repo::put_back(){
 
     if(fout.is_open()){
         for (unsigned int i = 0; i < employee_storage.size(); i++){
-            employee.set_helper(false);
+            employee_storage[i].set_helper(false);
             fout << employee_storage[i];
         }
     fout.close();

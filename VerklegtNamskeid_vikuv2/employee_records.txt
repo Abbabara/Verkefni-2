@@ -1,84 +1,31 @@
-Name: asd
-Ssn:  123
-Month:123
-Year: 123
-Wages:123
-
-Name: qwe
-Ssn:  234
-Month:234
-Year: 234
-Wages:234
-
-Name: asd
-Ssn:  123
-Month:123
-Year: 123
-Wages:123
-
-Name: qwe
-Ssn:  234
-Month:234
-Year: 234
-Wages:234
-
-Name: asd
-Ssn:  123
-Month:123
-Year: 123
-Wages:123
-
-Name: qwe
-Ssn:  234
-Month:234
-Year: 234
-Wages:234
-
-Name: asd
-Ssn:  123
-Month:123
-Year: 123
-Wages:123
-
-Name: qwe
-Ssn:  234
-Month:234
-Year: 234
-Wages:234
-
-Name: asd
-Ssn:  123
-Month:123
-Year: 123
-Wages:123
-
-Name: qwe
-Ssn:  234
-Month:234
-Year: 234
-Wages:234
-
-Name: asd
-Ssn:  123
-Month:123
-Year: 123
-Wages:123
-
-Name: qwe
-Ssn:  234
-Month:234
-Year: 234
-Wages:234
-
-Name: asd
-Ssn:  123
-Month:123
-Year: 123
-Wages:123
-
-Name: qwe
-Ssn:  234
-Month:234
-Year: 234
-Wages:234
-
+Abba 1111111111 1 2016 200 
+Abba 1111111111 1 2016 500 
+Abba 1111111111 1 2016 200 
+Abba 1111111111 1 2015 200 
+Abba 1111111111 1 2015 200 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2014 100 
+Snaebjorn 2222222222 2 2015 100 
+Snaebjorn 2222222222 2 2014 100 
+Snaebjorn 2222222222 2 2013 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 
+Snaebjorn 2222222222 2 2016 100 

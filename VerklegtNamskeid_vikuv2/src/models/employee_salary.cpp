@@ -36,9 +36,11 @@ void Employee_Salary::set_helper(bool check){
     helper = check;
 }
 
+void Employee_Salary::set_wage(double wage){
+    this->wage = wage;
+}
+
 Employee_Salary& Employee_Salary::operator = (Employee_Salary& right_side){
-
-
     return right_side;
 }
 

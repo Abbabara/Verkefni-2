@@ -28,18 +28,27 @@ void WagesUI::check_input(char input){
         wages_service.add_salary(add_record());
     }
     else if (input == '2'){
-        wages_service.get_all_for_ssn();
-
-    }
-    else if (input == '3'){
         unsigned int input;
         cout << "Enter the SSN of the employee: ";
         cin >> input;
         cout << endl;
         wages_service.get_salary_by_ssn(input);
     }
+    else if (input == '3'){
+        unsigned int ssn;
+        int year;
+        cout << "Enter the SSN of the employee: ";
+        cin >> ssn;
+        cout << "Enter the year you want to see: ";
+        cin >> year;
+        cout << endl;
+        wages_service.get_salary_by_ssn_and_year(ssn, year);
+    }
     else if (input == '4'){
-        cout << "Who made the most in a given year" << endl;
+        int year;
+        cout << "Please input the year you want to check: ";
+        cin >> year;
+        wages_service.get_highest_paid_employee(year);
     }
     else if (input == '5'){
         cout << endl << "Have a nice day :D" << endl;

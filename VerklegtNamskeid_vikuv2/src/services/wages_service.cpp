@@ -16,8 +16,23 @@ void Wages_service::validate_record(Employee_Salary& employee){
 
 }
 
-void Wages_service::get_all_for_ssn(){
-    //repo.read_file();
+void Wages_service::get_salary_by_ssn_and_year(unsigned int ssn, int year){
+    repo.read_file();
+    for (unsigned int i = 0; i < repo.employee_storage.size(); i++){
+        unsigned int temp_ssn;
+        int temp_year;
+        temp_ssn = repo.employee_storage[i].get_ssn();
+        temp_year = repo.employee_storage[i].get_year();
+
+        if (temp_ssn == ssn && temp_year == year){
+            temp_storage.push_back(repo.employee_storage[i]);
+        }
+    }
+    for (unsigned int i = 0; i < temp_storage.size(); i++){
+        cout << temp_storage[i];
+    }
+    temp_storage.clear();
+    repo.put_back();
 }
 
 void Wages_service::get_salary_by_ssn(unsigned int input){
@@ -33,6 +48,41 @@ void Wages_service::get_salary_by_ssn(unsigned int input){
     for (unsigned int i = 0; i < temp_storage.size(); i++){
         cout << temp_storage[i];
     }
+    temp_storage.clear();
+    repo.put_back();
+}
+void Wages_service::get_highest_paid_employee(int year){
+    repo.read_file();
+    for (unsigned int i = 0; i < repo.employee_storage.size(); i++){
+        if(repo.employee_storage[i].get_year() == year){
+            unsigned int temp_ssn;
+            int checker = 1;
+            double add_wage;
+            temp_ssn = repo.employee_storage[i].get_ssn();
+
+            for(unsigned int j = 0; j < temp_storage.size(); j++){
+                if (temp_ssn == temp_storage[j].get_ssn()){
+                    add_wage = temp_storage[j].get_wage();
+                    temp_storage[j].set_wage(add_wage + repo.employee_storage[i].get_wage());
+                    checker = 0;
+                }
+            }
+            if (checker == 1){
+                temp_storage.push_back(repo.employee_storage[i]);
+            }
+        }
+    }
+    int location = 0;
+    double max_wage = temp_storage[0].get_wage();
+    for (unsigned int i = 1; i < temp_storage.size(); i++){
+        if (temp_storage[i].get_wage() > max_wage){
+            max_wage = temp_storage[i].get_wage();
+            location = i;
+        }
+    }
+    cout << "The name of the employee with the highest salary in "
+         << year << " is: " << temp_storage[location].get_name() << endl
+         << endl;
     temp_storage.clear();
     repo.put_back();
 }
