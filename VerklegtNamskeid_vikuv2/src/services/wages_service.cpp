@@ -39,4 +39,5 @@ void Wages_service::get_salary_by_ssn(unsigned int input){
         cout << temp_storage[i];
         cout << "2" << endl;
     }
+    repo.put_back();
 }
