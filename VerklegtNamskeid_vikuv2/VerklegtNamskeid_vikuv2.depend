@@ -59,12 +59,13 @@
 	"wages_service.h"
 	"employee_salary.h"
 
-1512661641 c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\include\services\wages_service.h
+1512666344 c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\include\services\wages_service.h
 	<vector>
 	<string>
 	<algorithm>
 	"employee_salary.h"
 	"wages_repo.h"
+	"invalidNameException.h"
 
 1512660098 o.h"
 
@@ -84,7 +85,7 @@
 	<fstream>
 	<string>
 
-1512663540 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\ui\wagesui.cpp
+1512666344 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\ui\wagesui.cpp
 	"wagesui.h"
 
 1512663611 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\services\wages_service.cpp
@@ -134,5 +135,11 @@
 	<string>
 
 1512665306 source:/Users/arnbjorgfrimannsdottir/Documents/GitHub/Verkefni-2/VerklegtNamskeid_vikuv2/src/Exceptions/invalidNameException.cpp
+	"invalidNameException.h"
+
+1512666344 c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\include\exceptions\invalidnameexception.h
+	<string>
+
+1512666344 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\exceptions\invalidnameexception.cpp
 	"invalidNameException.h"
 

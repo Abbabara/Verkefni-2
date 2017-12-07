@@ -8,13 +8,14 @@ Wages_service::Wages_service()
 
 void Wages_service::add_salary(Employee_Salary employee){
     //validate_record(employee);
-    repo.print_employees(employee);
-
+    if(isvalidName(employee)){
+        repo.print_employees(employee);
+    }
 }
 
 bool Wages_service::isvalidName(Employee_Salary& employee){
     string name = employee.get_name();
-    for (int i = 0; i < name.length() ; i++) {
+    for (unsigned int i = 0; i < name.length(); i++) {
         if (!isalpha(name[i])) {
             throw (invalidNameException("invalidate name!"));
         }
