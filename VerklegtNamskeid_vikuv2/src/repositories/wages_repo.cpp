@@ -34,12 +34,12 @@ void Wages_repo::read_file(){
 }
 
 void Wages_repo::put_back(){
-    employee.set_helper(false);
     ofstream fout;
     fout.open("employee_records.txt", ios::app);
 
     if(fout.is_open()){
         for (unsigned int i = 0; i < employee_storage.size(); i++){
+            employee.set_helper(false);
             fout << employee_storage[i];
         }
     fout.close();

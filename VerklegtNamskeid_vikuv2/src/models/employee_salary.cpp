@@ -36,6 +36,12 @@ void Employee_Salary::set_helper(bool check){
     helper = check;
 }
 
+Employee_Salary& Employee_Salary::operator = (Employee_Salary& right_side){
+
+
+    return right_side;
+}
+
 ostream& operator << (ostream& out, Employee_Salary& employee){
     if (employee.helper){
         out << "Name: " << employee.name << endl;

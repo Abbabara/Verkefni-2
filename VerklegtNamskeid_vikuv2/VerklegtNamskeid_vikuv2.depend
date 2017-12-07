@@ -53,14 +53,14 @@
 	"employee_salary.h"
 	"wages_repo.h"
 
-1512573345 c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\include\models\employee_salary.h
+1512658763 c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\include\models\employee_salary.h
 	<iostream>
 	<string>
 
-1512573332 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\models\employee_salary.cpp
+1512658753 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\models\employee_salary.cpp
 	"employee_salary.h"
 
-1512574307 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\repositories\wages_repo.cpp
+1512657806 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\repositories\wages_repo.cpp
 	"wages_repo.h"
 
 1512569985 c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\include\repositories\wages_repo.h
@@ -69,9 +69,9 @@
 	<fstream>
 	<string>
 
-1512573548 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\ui\wagesui.cpp
+1512657066 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\ui\wagesui.cpp
 	"wagesui.h"
 
-1512574404 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\services\wages_service.cpp
+1512658829 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\services\wages_service.cpp
 	"wages_service.h"
 

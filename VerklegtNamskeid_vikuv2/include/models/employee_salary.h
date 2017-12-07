@@ -17,9 +17,11 @@ class Employee_Salary
         int get_year();
         double get_wage();
         void set_helper(bool check);
+        Employee_Salary& operator = (Employee_Salary& right_side);
 
         friend ostream& operator << (ostream& out, Employee_Salary& employee);
         friend istream& operator >> (istream& in, Employee_Salary& employee);
+
     private:
         string name;
         unsigned int ssn;

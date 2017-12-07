@@ -29,6 +29,7 @@ void WagesUI::check_input(char input){
     }
     else if (input == '2'){
         wages_service.get_all_for_ssn();
+
     }
     else if (input == '3'){
         unsigned int input;
