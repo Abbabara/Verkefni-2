@@ -10,9 +10,9 @@ class Employee_Salary
 {
     public:
         Employee_Salary();
-        Employee_Salary(string name, unsigned int ssn, int month, int year, double wage);
+        Employee_Salary(string name, string ssn, int month, int year, double wage);
         string get_name();
-        unsigned int get_ssn();
+        string get_ssn();
         int get_month();
         int get_year();
         double get_wage();
@@ -25,7 +25,7 @@ class Employee_Salary
 
     private:
         string name;
-        unsigned int ssn;
+        string ssn;
         int month;
         int year;
         double wage;

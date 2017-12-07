@@ -1,6 +1,6 @@
 #include "employee.h"
 
-Employee::Employee(string name, int ssn){
+Employee::Employee(string name, string ssn){
     this->name = name;
     this->ssn = ssn;
 }
@@ -9,7 +9,7 @@ string Employee::get_name(){
     return this->name;
 }
 
-int Employee::get_ssn(){
+string Employee::get_ssn(){
     return this->ssn;
 }
 

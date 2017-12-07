@@ -6,7 +6,7 @@ WagesUI::WagesUI()
 }
 
 void WagesUI::menu(){
-    char input;
+    char input = 0;
     while (input != '5'){
         cout << "Please choose an action with the corresponding number: " << endl
              << "-------------------------------------------------------" << endl
@@ -24,24 +24,37 @@ void WagesUI::menu(){
 
 void WagesUI::check_input(char input){
     if (input == '1'){
-
         try {
         wages_service.add_salary(add_record());
         }
         catch(invalidNameException e) {
             cout << e.getMessage() << endl;
         }
+        catch(invalidSsnException e) {
+            cout << e.getMessage() << endl;
+        }
+        catch(invalidMonthException e) {
+            cout << e.getMessage() << endl;
+        }
+        catch(invalidYearException e) {
+            cout << e.getMessage() << endl;
+        }
+        catch(invalidWageException e) {
+            cout << e.getMessage() << endl;
+        }
 
     }
     else if (input == '2'){
-        unsigned int input;
+        string input;
         cout << "Enter the SSN of the employee: ";
         cin >> input;
         cout << endl;
         wages_service.get_salary_by_ssn(input);
+
+        
     }
     else if (input == '3'){
-        unsigned int ssn;
+        string ssn;
         int year;
         cout << "Enter the SSN of the employee: ";
         cin >> ssn;
@@ -67,7 +80,7 @@ void WagesUI::check_input(char input){
 Employee_Salary WagesUI::add_record(){
     string name;
     int month, year;
-    unsigned int ssn;
+    string ssn;
     double wage;
 
     cout << "Enter the name of the employee: ";

@@ -9,14 +9,14 @@ using namespace std;
 class Employee
 {
     public:
-        Employee(string name, int ssn);
+        Employee(string name, string ssn);
         string get_name();
-        int get_ssn();
+        string get_ssn();
 
         friend ostream& operator << (ostream& out, Employee& employee);
     private:
         string name;
-        int ssn;
+        string ssn;
 };
 
 #endif // EMPLOYEE_H
