@@ -9,14 +9,14 @@ void WagesUI::menu(){
     char input = 0;
     while (input != '5'){
         cout << "Please choose an action with the corresponding number: " << endl
-             << "-------------------------------------------------------" << endl
-             << "1. Add a salary record." << endl
-             << "2. Get all salary records for an employee." << endl
-             << "3. Get a total salary for a given employee on a given year." << endl
-             << "4. Get the highest paid employee for a given year." << endl
-             << "5. To quit"
-             << endl
-             << "Input: ";
+        << "-------------------------------------------------------" << endl
+        << "1. Add a salary record." << endl
+        << "2. Get all salary records for an employee." << endl
+        << "3. Get a total salary for a given employee on a given year." << endl
+        << "4. Get the highest paid employee for a given year." << endl
+        << "5. To quit"
+        << endl
+        << "Input: ";
         cin >> input;
         check_input(input);
     }
@@ -25,7 +25,7 @@ void WagesUI::menu(){
 void WagesUI::check_input(char input){
     if (input == '1'){
         try {
-        wages_service.add_salary(add_record());
+            wages_service.add_salary(add_record());
         }
         catch(invalidNameException e) {
             cout << e.getMessage() << endl;
@@ -42,7 +42,7 @@ void WagesUI::check_input(char input){
         catch(invalidWageException e) {
             cout << e.getMessage() << endl;
         }
-
+        
     }
     else if (input == '2'){
         string input;
@@ -50,7 +50,7 @@ void WagesUI::check_input(char input){
         cin >> input;
         cout << endl;
         wages_service.get_salary_by_ssn(input);
-
+        
         
     }
     else if (input == '3'){
@@ -82,7 +82,7 @@ Employee_Salary WagesUI::add_record(){
     int month, year;
     string ssn;
     double wage;
-
+    
     cout << "Enter the name of the employee: ";
     cin >> ws;
     getline (cin, name);
@@ -95,8 +95,8 @@ Employee_Salary WagesUI::add_record(){
     cout << "Enter this months salary: ";
     cin >> wage;
     cout << endl;
-
+    
     Employee_Salary employee(name, ssn, month, year, wage);
-
+    
     return employee;
 }

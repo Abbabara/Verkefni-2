@@ -16,6 +16,6 @@ string Employee::get_ssn(){
 ostream& operator << (ostream& out, Employee& employee){
     out << "Name: " << employee.name << endl
         << "Ssn: " << employee.ssn << endl;
-
+    
     return out;
 }

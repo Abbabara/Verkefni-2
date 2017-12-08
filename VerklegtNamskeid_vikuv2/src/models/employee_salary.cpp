@@ -1,7 +1,7 @@
 #include "employee_salary.h"
 
 Employee_Salary::Employee_Salary(){
-
+    
 }
 
 Employee_Salary::Employee_Salary(string name,string ssn, int month, int year, double wage){
@@ -51,7 +51,7 @@ Employee_Salary Employee_Salary::operator = (Employee_Salary& right_side){
     temp.month = right_side.month;
     temp.year = right_side.year;
     temp.wage = right_side.wage;
-
+    
     return temp;
 }
 
@@ -62,7 +62,7 @@ ostream& operator << (ostream& out, Employee_Salary& employee){
             << "Month:" << employee.month << endl
             << "Year: " << employee.year << endl
             << "Wages:" << employee.wage << endl;
-            out << endl;
+        out << endl;
     }
     else{
         out << employee.name << ", "
@@ -71,14 +71,14 @@ ostream& operator << (ostream& out, Employee_Salary& employee){
             << employee.year << " "
             << employee.wage;
     }
-
+    
     return out;
 }
 
 istream& operator >> (istream& in, Employee_Salary& employee){
     getline(in, employee.name, ',')
     >> employee.ssn >> employee.month >> employee.year >> employee.wage;
-
+    
     return in;
 }
 

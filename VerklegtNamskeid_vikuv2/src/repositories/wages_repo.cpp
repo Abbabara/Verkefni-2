@@ -9,7 +9,7 @@ void Wages_repo::print_employees(Employee_Salary employee){
     employee.set_helper(false);
     ofstream fout;
     fout.open("employee_records.txt", ios::app);
-
+    
     if(fout.is_open()){
         fout << employee;
         fout.close();
@@ -28,8 +28,8 @@ void Wages_repo::read_file(){
         fin.close();
     }
     /*for (unsigned int i = 0; i < employee_storage.size(); i++){
-        cout << employee_storage[i] << endl;
-    }*/
+     cout << employee_storage[i] << endl;
+     }*/
     fout.open("employee_records.txt", ios::trunc);
     fout.close();
 }
@@ -56,7 +56,7 @@ void Wages_repo::read_file2(){
 void Wages_repo::put_back(){
     ofstream fout;
     fout.open("employee_records.txt", ios::app);
-
+    
     if(fout.is_open()){
         if (employee_storage.size() > 0){
             for (unsigned int i = 0; i < employee_storage.size(); i++){
@@ -64,7 +64,7 @@ void Wages_repo::put_back(){
                 fout << employee_storage[i];
             }
         }
-    fout.close();
+        fout.close();
     }
     employee_storage.clear();
 }

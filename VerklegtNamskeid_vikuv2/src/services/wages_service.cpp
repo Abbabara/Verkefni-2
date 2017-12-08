@@ -16,12 +16,12 @@ void Wages_service::add_salary(Employee_Salary employee){
                 && ssn == repo.employee_storage[i].get_ssn()){
                 repo.employee_storage[i].set_wage(employee.get_wage());
                 checker = 0;
-                }
+            }
         }
         repo.put_back();
-        if (checker == 1){
-            repo.print_employees(employee);
-        }
+        /*if (checker == 1){
+         repo.print_employees(employee);
+         }*/
         for (unsigned int i = 0; i < repo.employee_storage.size(); i++){
             cout << repo.employee_storage[i];
         }
@@ -40,51 +40,51 @@ bool Wages_service::isvalidName(Employee_Salary& employee){
 
 bool Wages_service::isvalidSsn(Employee_Salary& employee){
     string ssn = employee.get_ssn();
-
+    
     for (unsigned int i = 0; i < ssn.length(); i++) {
         if (!isdigit(ssn[i])) {
             throw (invalidSsnException("invalid Ssn!"));
         }
     }
-        if (!(ssn.length() == 10)){
-            throw (invalidSsnException("invalid Ssn!"));
-        }
-/*
-        string sday;
-        sday[0] = '\0';
-        for (int i = 0; i < 2 ; i++) {
-            sday[i] = ssn[i];
-        }
-        sday[0] = ssn[0];
-        sday[1] = ssn[1];
-        cout << sday << endl;
-        int dayint = atoi(sday.c_str());
-
-        string smonth;
-        smonth[0] = '\0';
-        for (int i = 2; i < 4 ; i++) {
-            smonth[i-2] = ssn[i];
-        }
-        smonth[0] = ssn[2];
-        smonth[1] = ssn[3];
-        cout << smonth << endl;
-        int monthint = atoi(smonth.c_str());
-
-        string twonumbers;
-        twonumbers[0] = '\0';
-        for (int i = 6; i < 8 ; i++) {
-            twonumbers[i-6] = ssn[i];
-        }
-        cout << twonumbers << endl;
-        int twonumbersint = atoi(twonumbers.c_str());
-        cout << twonumbersint << endl;
-        cout << dayint << endl;
-        cout << monthint << endl;
-
-        if (dayint < 01 || dayint > 31 || monthint < 01 || monthint > 12 || twonumbersint < 20){
-            throw (invalidSsnException("invalid Ssn3!"));
-        }
-*/
+    if (!(ssn.length() == 10)){
+        throw (invalidSsnException("invalid Ssn!"));
+    }
+    /*
+     string sday;
+     sday[0] = '\0';
+     for (int i = 0; i < 2 ; i++) {
+     sday[i] = ssn[i];
+     }
+     sday[0] = ssn[0];
+     sday[1] = ssn[1];
+     cout << sday << endl;
+     int dayint = atoi(sday.c_str());
+     
+     string smonth;
+     smonth[0] = '\0';
+     for (int i = 2; i < 4 ; i++) {
+     smonth[i-2] = ssn[i];
+     }
+     smonth[0] = ssn[2];
+     smonth[1] = ssn[3];
+     cout << smonth << endl;
+     int monthint = atoi(smonth.c_str());
+     
+     string twonumbers;
+     twonumbers[0] = '\0';
+     for (int i = 6; i < 8 ; i++) {
+     twonumbers[i-6] = ssn[i];
+     }
+     cout << twonumbers << endl;
+     int twonumbersint = atoi(twonumbers.c_str());
+     cout << twonumbersint << endl;
+     cout << dayint << endl;
+     cout << monthint << endl;
+     
+     if (dayint < 01 || dayint > 31 || monthint < 01 || monthint > 12 || twonumbersint < 20){
+     throw (invalidSsnException("invalid Ssn3!"));
+     }
+     */
     return true;
 }
 
@@ -119,10 +119,10 @@ void Wages_service::get_salary_by_ssn_and_year(string ssn, int year){
     int temp_year;
     for (unsigned int i = 0; i < repo.employee_storage.size(); i++){
         string temp_ssn;
-
+        
         temp_ssn = repo.employee_storage[i].get_ssn();
         temp_year = repo.employee_storage[i].get_year();
-
+        
         if (temp_ssn == ssn && temp_year == year){
             temp_storage.push_back(repo.employee_storage[i]);
         }
@@ -138,7 +138,7 @@ void Wages_service::get_salary_by_ssn_and_year(string ssn, int year){
 
 void Wages_service::get_salary_by_ssn(string input){
     repo.read_file();
-
+    
     for (unsigned int i = 0; i < repo.employee_storage.size(); i++){
         string temp;
         temp = repo.employee_storage[i].get_ssn();
@@ -160,7 +160,7 @@ void Wages_service::get_highest_paid_employee(int year){
             int checker = 1;
             double add_wage;
             temp_ssn = repo.employee_storage[i].get_ssn();
-
+            
             for(unsigned int j = 0; j < temp_storage.size(); j++){
                 if (temp_ssn == temp_storage[j].get_ssn()){
                     add_wage = temp_storage[j].get_wage();
