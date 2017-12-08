@@ -22,14 +22,22 @@ void Wages_service::add_salary(Employee_Salary employee){
         if (checker == 1){
             repo.print_employees(employee);
         }
+        for (unsigned int i = 0; i < repo.employee_storage.size(); i++){
+            cout << repo.employee_storage[i];
+        }
+
+
+        /*if (checker == 1){
+            repo.print_employees(employee);
+        }
+        repo.print_employees(employee);*/
     }
 }
 
 bool Wages_service::isvalidName(Employee_Salary& employee){
     string name = employee.get_name();
     for (unsigned int i = 0; i < name.length(); i++) {
-        if (isalpha(name[i]) || name[i] == ' ') {}
-        else{
+        if (!(isalpha(name[i]) || name[i] == ' ')) {
             throw (invalidNameException("invalid name!"));
         }
     }
@@ -43,32 +51,46 @@ bool Wages_service::isvalidSsn(Employee_Salary& employee){
         if (!isdigit(ssn[i])) {
             throw (invalidSsnException("invalid Ssn!"));
         }
-        if (ssn.length() == !10) {
+    }
+        if (!(ssn.length() == 10)){
             throw (invalidSsnException("invalid Ssn!"));
         }
-
+/*
         string sday;
+        sday[0] = '\0';
         for (int i = 0; i < 2 ; i++) {
             sday[i] = ssn[i];
         }
+        sday[0] = ssn[0];
+        sday[1] = ssn[1];
+        cout << sday << endl;
         int dayint = atoi(sday.c_str());
 
         string smonth;
+        smonth[0] = '\0';
         for (int i = 2; i < 4 ; i++) {
             smonth[i-2] = ssn[i];
         }
+        smonth[0] = ssn[2];
+        smonth[1] = ssn[3];
+        cout << smonth << endl;
         int monthint = atoi(smonth.c_str());
 
         string twonumbers;
+        twonumbers[0] = '\0';
         for (int i = 6; i < 8 ; i++) {
             twonumbers[i-6] = ssn[i];
         }
+        cout << twonumbers << endl;
         int twonumbersint = atoi(twonumbers.c_str());
+        cout << twonumbersint << endl;
+        cout << dayint << endl;
+        cout << monthint << endl;
 
-        if (dayint < 1 || dayint > 31 || monthint < 1 || monthint > 12 || twonumbersint < 20){
-            throw (invalidSsnException("invalid Ssn!"));
+        if (dayint < 01 || dayint > 31 || monthint < 01 || monthint > 12 || twonumbersint < 20){
+            throw (invalidSsnException("invalid Ssn3!"));
         }
-    }
+*/
     return true;
 }
 

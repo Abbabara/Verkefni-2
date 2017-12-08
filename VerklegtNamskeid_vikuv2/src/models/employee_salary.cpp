@@ -65,21 +65,19 @@ ostream& operator << (ostream& out, Employee_Salary& employee){
             out << endl;
     }
     else{
-        out << employee.name << ", "
+        out << employee.name << " "
             << employee.ssn << " "
             << employee.month << " "
             << employee.year << " "
-            << employee.wage;
+            << employee.wage << endl;
     }
 
     return out;
-
-    //Breyta í bara if og else og í færslunni sem fer inní skjalið þá hafa nafnið aftast
 }
 
 istream& operator >> (istream& in, Employee_Salary& employee){
-    getline(in, employee.name, ',');
-    in >> employee.ssn >> employee.month >> employee.year >> employee.wage;
+    getline(in, employee.name, ',')
+    >> employee.ssn >> employee.month >> employee.year >> employee.wage;
 
     return in;
 }

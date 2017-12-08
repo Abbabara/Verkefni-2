@@ -42,13 +42,21 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Exceptions/invalidMonthException.h" />
 		<Unit filename="include/Exceptions/invalidNameException.h" />
+		<Unit filename="include/Exceptions/invalidSsnException.h" />
+		<Unit filename="include/Exceptions/invalidWageException.h" />
+		<Unit filename="include/Exceptions/invalidYearException.h" />
 		<Unit filename="include/UI/wagesui.h" />
 		<Unit filename="include/models/employee_salary.h" />
 		<Unit filename="include/repositories/wages_repo.h" />
 		<Unit filename="include/services/wages_service.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Exceptions/invalidMonthException.cpp" />
 		<Unit filename="src/Exceptions/invalidNameException.cpp" />
+		<Unit filename="src/Exceptions/invalidSsnException.cpp" />
+		<Unit filename="src/Exceptions/invalidWageException.cpp" />
+		<Unit filename="src/Exceptions/invalidYearException.cpp" />
 		<Unit filename="src/UI/wagesui.cpp" />
 		<Unit filename="src/models/employee_salary.cpp" />
 		<Unit filename="src/repositories/wages_repo.cpp" />
