@@ -8,29 +8,32 @@ Wages_service::Wages_service()
 
 void Wages_service::add_salary(Employee_Salary employee){
     if(isvalidName(employee) && isvalidSsn(employee) && isvalidMonth(employee) && isvalidYear(employee) && isvalidWage(employee)){
-       /* cout << "1" << endl;
+        cout << "1" << endl;
         repo.read_file();
         int checker = 1, month = employee.get_month(), year = employee.get_year();
         string ssn = employee.get_ssn();
         for (unsigned int i = 0; i < repo.employee_storage.size(); i++){
             cout << "2" << endl;
             if (month == repo.employee_storage[i].get_month() && year == repo.employee_storage[i].get_year()
-                && ssn == repo.employee_storage[i].get_ssn())
-                repo.employee_storage[i] = employee;
+                && ssn == repo.employee_storage[i].get_ssn()){
+                cout << "4" << endl;
+                repo.employee_storage[i].set_wage(employee.get_wage());
                 checker = 0;
+                }
         }
         cout << "3" << endl;
         repo.put_back();
-        if (checker == 1){*/
+        if (checker == 1){
             repo.print_employees(employee);
-      //  }
+        }
     }
 }
 
 bool Wages_service::isvalidName(Employee_Salary& employee){
     string name = employee.get_name();
     for (unsigned int i = 0; i < name.length(); i++) {
-        if (!isalpha(name[i])) {
+        if (isalpha(name[i]) || name[i] == ' ') {}
+        else{
             throw (invalidNameException("invalid name!"));
         }
     }
