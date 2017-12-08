@@ -115,7 +115,7 @@ bool Wages_service::isvalidWage(Employee_Salary& employee) {
 
 void Wages_service::get_salary_by_ssn_and_year(string ssn, int year){
     repo.read_file();
-    int temp_wage;
+    int temp_wage = 0;
     int temp_year;
     for (unsigned int i = 0; i < repo.employee_storage.size(); i++){
         string temp_ssn;
