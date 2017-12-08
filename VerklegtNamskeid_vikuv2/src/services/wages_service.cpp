@@ -8,7 +8,22 @@ Wages_service::Wages_service()
 
 void Wages_service::add_salary(Employee_Salary employee){
     if(isvalidName(employee) && isvalidSsn(employee) && isvalidMonth(employee) && isvalidYear(employee) && isvalidWage(employee)){
-        repo.print_employees(employee);
+       /* cout << "1" << endl;
+        repo.read_file();
+        int checker = 1, month = employee.get_month(), year = employee.get_year();
+        string ssn = employee.get_ssn();
+        for (unsigned int i = 0; i < repo.employee_storage.size(); i++){
+            cout << "2" << endl;
+            if (month == repo.employee_storage[i].get_month() && year == repo.employee_storage[i].get_year()
+                && ssn == repo.employee_storage[i].get_ssn())
+                repo.employee_storage[i] = employee;
+                checker = 0;
+        }
+        cout << "3" << endl;
+        repo.put_back();
+        if (checker == 1){*/
+            repo.print_employees(employee);
+      //  }
     }
 }
 
@@ -24,35 +39,35 @@ bool Wages_service::isvalidName(Employee_Salary& employee){
 
 bool Wages_service::isvalidSsn(Employee_Salary& employee){
     string ssn = employee.get_ssn();
-    
+
     for (unsigned int i = 0; i < ssn.length(); i++) {
         if (!isdigit(ssn[i])) {
-            throw (invalidSsnException("invalid Ssn!"));
+            throw (invalidSsnException("invalid Ssn1!"));
         }
-        if (ssn.length() != 10) {
-            throw (invalidSsnException("invalid Ssn!"));
+        if (ssn.length() == !10) {
+            throw (invalidSsnException("invalid Ssn2!"));
         }
-        
+
         string sday;
         for (int i = 0; i < 2 ; i++) {
             sday[i] = ssn[i];
         }
         int dayint = atoi(sday.c_str());
-        
+
         string smonth;
         for (int i = 2; i < 4 ; i++) {
             smonth[i-2] = ssn[i];
         }
         int monthint = atoi(smonth.c_str());
-        
+
         string twonumbers;
         for (int i = 6; i < 8 ; i++) {
             twonumbers[i-6] = ssn[i];
         }
         int twonumbersint = atoi(twonumbers.c_str());
-        
+
         if (dayint < 1 || dayint > 31 || monthint < 1 || monthint > 12 || twonumbersint < 20){
-            throw (invalidSsnException("invalid Ssn!"));
+            throw (invalidSsnException("invalid Ssn3!"));
         }
     }
     return true;
@@ -90,7 +105,7 @@ void Wages_service::get_salary_by_ssn_and_year(string ssn, int year){
         int temp_year;
         temp_ssn = repo.employee_storage[i].get_ssn();
         temp_year = repo.employee_storage[i].get_year();
-        
+
         if (temp_ssn == ssn && temp_year == year){
             temp_storage.push_back(repo.employee_storage[i]);
         }
@@ -108,7 +123,7 @@ void Wages_service::get_salary_by_ssn(string input){
     for (unsigned int i = 0; i < repo.employee_storage.size(); i++){
         string temp;
         temp = repo.employee_storage[i].get_ssn();
-        
+
         if (temp == input){
             temp_storage.push_back(repo.employee_storage[i]);
         }
@@ -127,7 +142,7 @@ void Wages_service::get_highest_paid_employee(int year){
             int checker = 1;
             double add_wage;
             temp_ssn = repo.employee_storage[i].get_ssn();
-            
+
             for(unsigned int j = 0; j < temp_storage.size(); j++){
                 if (temp_ssn == temp_storage[j].get_ssn()){
                     add_wage = temp_storage[j].get_wage();

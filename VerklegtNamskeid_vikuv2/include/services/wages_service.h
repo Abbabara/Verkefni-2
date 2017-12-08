@@ -4,7 +4,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
-#include <cstdlib>
+#include <stdlib.h>
 #include "employee_salary.h"
 #include "wages_repo.h"
 #include "invalidNameException.h"
@@ -23,7 +23,7 @@ public:
     void get_salary_by_ssn_and_year(string ssn, int year);
     void get_highest_paid_employee(int year);
     vector<Employee_Salary> temp_storage;
-    
+
 private:
     Wages_repo repo;
     bool isvalidName(Employee_Salary& employee);
@@ -31,7 +31,7 @@ private:
     bool isvalidMonth(Employee_Salary& employee);
     bool isvalidYear(Employee_Salary& employee);
     bool isvalidWage(Employee_Salary& employee);
-    
+
 };
 
 #endif // WAGES_SERVICE_H

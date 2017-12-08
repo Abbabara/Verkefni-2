@@ -40,51 +40,46 @@ void Employee_Salary::set_wage(double wage){
     this->wage = wage;
 }
 
-Employee_Salary& Employee_Salary::operator = (Employee_Salary& right_side){
+Employee_Salary Employee_Salary::operator = (Employee_Salary& right_side){
     Employee_Salary temp;
-    temp.name = right_side.name;
+    for (unsigned int i = 0; i < right_side.name.size(); i++){
+        temp.name[i] = right_side.name[i];
+    }
+    for (unsigned int i = 0; i < right_side.ssn.size(); i++){
+        temp.ssn[i] = right_side.ssn[i];
+    }
+    temp.month = right_side.month;
+    temp.year = right_side.year;
+    temp.wage = right_side.wage;
 
     return temp;
 }
 
 ostream& operator << (ostream& out, Employee_Salary& employee){
     if (employee.helper){
-        out << "Name: " << employee.name << endl;
+        out << "Name: " << employee.name << endl
+            << "Ssn:  " << employee.ssn << endl
+            << "Month:" << employee.month << endl
+            << "Year: " << employee.year << endl
+            << "Wages:" << employee.wage << endl;
+            out << endl;
     }
     else{
-        out << employee.name << " ";
+        out << employee.name << ", "
+            << employee.ssn << " "
+            << employee.month << " "
+            << employee.year << " "
+            << employee.wage;
     }
-    if (employee.helper){
-        out << "Ssn:  " << employee.ssn << endl;
-    }
-    else{
-        out << employee.ssn << " ";
-    }
-    if (employee.helper){
-        out << "Month:" << employee.month << endl;
-    }
-    else{
-        out << employee.month << " ";
-    }
-    if (employee.helper){
-        out << "Year: " << employee.year << endl;
-    }
-    else{
-        out << employee.year << " ";
-    }
-    if (employee.helper){
-        out << "Wages:" << employee.wage << endl;
-    }
-    else{
-        out << employee.wage << " ";
-    }
-    out << endl;
 
     return out;
+
+    //Breyta í bara if og else og í færslunni sem fer inní skjalið þá hafa nafnið aftast
 }
 
 istream& operator >> (istream& in, Employee_Salary& employee){
-    in >> employee.name >> employee.ssn >> employee.month >> employee.year >> employee.wage;
+    getline(in, employee.name, ',');
+    in >> employee.ssn >> employee.month >> employee.year >> employee.wage;
 
     return in;
 }

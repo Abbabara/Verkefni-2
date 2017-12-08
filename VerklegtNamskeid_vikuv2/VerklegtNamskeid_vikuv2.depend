@@ -59,21 +59,26 @@
 	"wages_service.h"
 	"employee_salary.h"
 
-1512666344 c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\include\services\wages_service.h
+1512724434 c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\include\services\wages_service.h
 	<vector>
 	<string>
 	<algorithm>
+	<stdlib.h>
 	"employee_salary.h"
 	"wages_repo.h"
 	"invalidNameException.h"
+	"invalidSsnException.h"
+	"invalidMonthException.h"
+	"invalidYearException.h"
+	"invalidWageException.h"
 
 1512660098 o.h"
 
-1512662800 c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\include\models\employee_salary.h
+1512684621 c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\include\models\employee_salary.h
 	<iostream>
 	<string>
 
-1512662800 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\models\employee_salary.cpp
+1512722444 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\models\employee_salary.cpp
 	"employee_salary.h"
 
 1512660098 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\repositories\wages_repo.cpp
@@ -85,10 +90,10 @@
 	<fstream>
 	<string>
 
-1512666344 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\ui\wagesui.cpp
+1512683169 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\ui\wagesui.cpp
 	"wagesui.h"
 
-1512666621 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\services\wages_service.cpp
+1512687245 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\services\wages_service.cpp
 	"wages_service.h"
 
 1512664899 source:/Users/arnbjorgfrimannsdottir/Documents/GitHub/Verkefni-2/VerklegtNamskeid_vikuv2/main.cpp
@@ -142,4 +147,28 @@
 
 1512666344 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\exceptions\invalidnameexception.cpp
 	"invalidNameException.h"
+
+1512683169 c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\include\exceptions\invalidssnexception.h
+	<string>
+
+1512683169 c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\include\exceptions\invalidmonthexception.h
+	<string>
+
+1512683169 c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\include\exceptions\invalidyearexception.h
+	<string>
+
+1512683169 c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\include\exceptions\invalidwageexception.h
+	<string>
+
+1512683169 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\exceptions\invalidmonthexception.cpp
+	"invalidMonthException.h"
+
+1512683169 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\exceptions\invalidssnexception.cpp
+	"invalidSsnException.h"
+
+1512683169 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\exceptions\invalidwageexception.cpp
+	"invalidWageException.h"
+
+1512683169 source:c:\users\snæbjörn\documents\github\verkefni-2_2\verklegtnamskeid_vikuv2\src\exceptions\invalidyearexception.cpp
+	"invalidYearException.h"
 

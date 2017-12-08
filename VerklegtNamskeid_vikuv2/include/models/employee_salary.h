@@ -18,7 +18,7 @@ class Employee_Salary
         double get_wage();
         void set_helper(bool check);
         void set_wage(double wage);
-        Employee_Salary& operator = (Employee_Salary& right_side);
+        Employee_Salary operator = (Employee_Salary& right_side);
 
         friend ostream& operator << (ostream& out, Employee_Salary& employee);
         friend istream& operator >> (istream& in, Employee_Salary& employee);
