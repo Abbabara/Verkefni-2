@@ -8,20 +8,16 @@ Wages_service::Wages_service()
 
 void Wages_service::add_salary(Employee_Salary employee){
     if(isvalidName(employee) && isvalidSsn(employee) && isvalidMonth(employee) && isvalidYear(employee) && isvalidWage(employee)){
-        cout << "1" << endl;
         repo.read_file();
         int checker = 1, month = employee.get_month(), year = employee.get_year();
         string ssn = employee.get_ssn();
         for (unsigned int i = 0; i < repo.employee_storage.size(); i++){
-            cout << "2" << endl;
             if (month == repo.employee_storage[i].get_month() && year == repo.employee_storage[i].get_year()
                 && ssn == repo.employee_storage[i].get_ssn()){
-                cout << "4" << endl;
                 repo.employee_storage[i].set_wage(employee.get_wage());
                 checker = 0;
                 }
         }
-        cout << "3" << endl;
         repo.put_back();
         if (checker == 1){
             repo.print_employees(employee);
@@ -45,10 +41,10 @@ bool Wages_service::isvalidSsn(Employee_Salary& employee){
 
     for (unsigned int i = 0; i < ssn.length(); i++) {
         if (!isdigit(ssn[i])) {
-            throw (invalidSsnException("invalid Ssn1!"));
+            throw (invalidSsnException("invalid Ssn!"));
         }
         if (ssn.length() == !10) {
-            throw (invalidSsnException("invalid Ssn2!"));
+            throw (invalidSsnException("invalid Ssn!"));
         }
 
         string sday;
@@ -70,7 +66,7 @@ bool Wages_service::isvalidSsn(Employee_Salary& employee){
         int twonumbersint = atoi(twonumbers.c_str());
 
         if (dayint < 1 || dayint > 31 || monthint < 1 || monthint > 12 || twonumbersint < 20){
-            throw (invalidSsnException("invalid Ssn3!"));
+            throw (invalidSsnException("invalid Ssn!"));
         }
     }
     return true;
