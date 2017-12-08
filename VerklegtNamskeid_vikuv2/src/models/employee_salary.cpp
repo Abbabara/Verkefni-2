@@ -65,11 +65,11 @@ ostream& operator << (ostream& out, Employee_Salary& employee){
             out << endl;
     }
     else{
-        out << employee.name << " "
+        out << employee.name << ", "
             << employee.ssn << " "
             << employee.month << " "
             << employee.year << " "
-            << employee.wage << endl;
+            << employee.wage;
     }
 
     return out;

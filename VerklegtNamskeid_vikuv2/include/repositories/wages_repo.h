@@ -12,6 +12,7 @@ class Wages_repo
         Wages_repo();
         void print_employees(Employee_Salary employee);
         void read_file();
+        void read_file2();
         void put_back();
 
         vector<Employee_Salary> employee_storage;

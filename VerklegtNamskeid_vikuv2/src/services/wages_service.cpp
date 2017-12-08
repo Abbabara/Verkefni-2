@@ -8,7 +8,7 @@ Wages_service::Wages_service()
 
 void Wages_service::add_salary(Employee_Salary employee){
     if(isvalidName(employee) && isvalidSsn(employee) && isvalidMonth(employee) && isvalidYear(employee) && isvalidWage(employee)){
-        repo.read_file();
+        repo.read_file2();
         int checker = 1, month = employee.get_month(), year = employee.get_year();
         string ssn = employee.get_ssn();
         for (unsigned int i = 0; i < repo.employee_storage.size(); i++){
@@ -25,12 +25,6 @@ void Wages_service::add_salary(Employee_Salary employee){
         for (unsigned int i = 0; i < repo.employee_storage.size(); i++){
             cout << repo.employee_storage[i];
         }
-
-
-        /*if (checker == 1){
-            repo.print_employees(employee);
-        }
-        repo.print_employees(employee);*/
     }
 }
 
@@ -121,9 +115,11 @@ bool Wages_service::isvalidWage(Employee_Salary& employee) {
 
 void Wages_service::get_salary_by_ssn_and_year(string ssn, int year){
     repo.read_file();
+    int temp_wage;
+    int temp_year;
     for (unsigned int i = 0; i < repo.employee_storage.size(); i++){
         string temp_ssn;
-        int temp_year;
+
         temp_ssn = repo.employee_storage[i].get_ssn();
         temp_year = repo.employee_storage[i].get_year();
 
@@ -132,8 +128,9 @@ void Wages_service::get_salary_by_ssn_and_year(string ssn, int year){
         }
     }
     for (unsigned int i = 0; i < temp_storage.size(); i++){
-        cout << temp_storage[i];
+        temp_wage += temp_storage[i].get_wage();
     }
+    cout << "Total wage for this employee in " << temp_year << " is: " << temp_wage << endl;
     temp_storage.clear();
     repo.put_back();
 }
@@ -141,10 +138,10 @@ void Wages_service::get_salary_by_ssn_and_year(string ssn, int year){
 
 void Wages_service::get_salary_by_ssn(string input){
     repo.read_file();
+
     for (unsigned int i = 0; i < repo.employee_storage.size(); i++){
         string temp;
         temp = repo.employee_storage[i].get_ssn();
-
         if (temp == input){
             temp_storage.push_back(repo.employee_storage[i]);
         }
